@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            计算物理几道习题的解法 | 
+        
+        GSJCAN
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/avatar.jpg">
+    <link rel="icon" sizes="192x192" href="/img/avatar.jpg">
+    <link rel="apple-touch-icon" href="/img/avatar.jpg">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Shaojun Guo">
+    <meta name="description" content="It was too damn hard.">
+    <meta name="keywords" content="null,计算初步">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="GSJCAN">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://gsjcan.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="计算物理几道习题的解法 | GSJCAN">
+    <meta property="og:description" content="It was too damn hard.">
+    <meta property="og:article:tag" content="计算初步"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93751110-1', 'auto');ga('send', 'pageview');
+    </script>
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-1"><span class="post-toc-number">1.</span> <span class="post-toc-text">Example 1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-2"><span class="post-toc-number">2.</span> <span class="post-toc-text">Example 2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-3"><span class="post-toc-number">3.</span> <span class="post-toc-text">Example 3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-4"><span class="post-toc-number">4.</span> <span class="post-toc-text">Example 4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-5"><span class="post-toc-number">5.</span> <span class="post-toc-text">Example 5</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-6"><span class="post-toc-number">6.</span> <span class="post-toc-text">Example 6</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-7"><span class="post-toc-number">7.</span> <span class="post-toc-text">Example 7</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Example-8"><span class="post-toc-number">8.</span> <span class="post-toc-text">Example 8</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/screenshot.jpg)">
+    
+            <p class="article-headline-p">
+                计算物理几道习题的解法
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Shaojun Guo</strong>
+        <span>3月 22, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/计算初步/">计算初步</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/03/22/计算物理几道习题的解法/" class="leancloud-views_num" data-flag-title="计算物理几道习题的解法">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=计算物理几道习题的解法&url=http://gsjcan.com//2017/03/22/计算物理几道习题的解法/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=计算物理几道习题的解法&url=http://gsjcan.com//2017/03/22/计算物理几道习题的解法/index.html&via=Shaojun Guo" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gsjcan.com//2017/03/22/计算物理几道习题的解法/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gsjcan.com//2017/03/22/计算物理几道习题的解法/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>这几天整理了一下之前计算物理课程的课程报告，现在将其上传到博客里算是学习的一点记录。</p>
+</blockquote>
+<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE1.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code> #include&quot;stdio.h&quot;
+ #include&quot;math.h&quot;
+ void main() 
+ {
+    double f(double x); 
+    double T(double x,double y,int z);
+    int i,N=500000,N1=3000000,N2=1; 
+    double r11,r12,r21,r22,r31=0,r32=0,h,s; 
+    r11=0.01;r12=1.0;
+    r21=0.01;r22=10.0;
+    printf(&quot;\n  已经将实验中的数据(包括上下限)预置于程序内!!\n\n&quot;);    //提示用户
+    h=(r12-r11)/N;                                    //计算区间大小
+    printf(&quot;  以下为“R1=0.01m、R2=1m”的积分结果：\n &quot;);
+    printf(&quot;         取区间数N为:  %d\n\n &quot;,N);        //输出所选择的N值大小
+    s=f(r11)*h; 
+    for(i=1;i&lt;N;i++) 
+    {
+      s=s+f(r11+i*h)*h; } 
+      printf(&quot;  (1)矩形法求积分值     s=%10.6f\n&quot;,s);  //使用矩形法进行计算
+      s=0;
+      s=0.5*(f(r11)+f(r11+h))*h; 
+      for(i=1;i&lt;N;i++) 
+        {
+           s=s+0.5*(f(r11+i*h)+f(r11+(i+1)*h))*h;
+        } 
+      printf(&quot;   (2)梯形法求积分值     s=%10.6f\n&quot;,s);    //使用梯形法进行计算
+      s=(4*T(r11,r12,2*N)-T(r11,r12,N))/3.0;  
+      printf(&quot;   (3)辛普森法求积分值   s=%f\n&quot;,s);        //使用辛普森法进行计算
+      printf(&quot;\n\n&quot;);
+      h=(r22-r21)/N1;
+      printf(&quot;    以下为“R1=0.01m、R2=10m”的积分结果：\n &quot;);        //输出结果
+      printf(&quot;            取区间数N为:  %d\n\n &quot;,N1);
+      s=f(r21)*h; 
+      for(i=1;i&lt;N1;i++) 
+     {s=s+f(r21+i*h)*h; } 
+     printf(&quot;  (1)矩形法求积分值    s=%10.6f\n&quot;,s);
+     s=0;
+     s=0.5*(f(r21)+f(r21+h))*h; 
+     for(i=1;i&lt;N1;i++) 
+    {
+      s=s+0.5*(f(r21+i*h)+f(r21+(i+1)*h))*h;
+    } 
+    printf(&quot;   (2)梯形法求积分值    s=%10.6f\n&quot;,s);
+    s=(4*T(r21,r22,2*N1)-T(r21,r22,N1))/3.0;  
+    printf(&quot;   (3)辛普森法求积分值  s=%f\n&quot;,s);
+    printf(&quot;\n           (已结束!!)\n\n&quot;);
+    while(1)
+   {
+      printf(&quot;  若需更改其他上下限，请直接输入\n\n&quot;);  //给用户提供改变上下限的功能
+      printf(&quot;                      请输入积分值下限 R1= &quot;);
+      scanf(&quot;%lf&quot;,&amp;r31);
+      printf(&quot;                      请输入积分值上限 R2= &quot;);
+      scanf(&quot;%lf&quot;,&amp;r32);
+      printf(&quot;                      请输入区间数   N= &quot;);
+      scanf(&quot;%d&quot;,&amp;N2);
+      h=(r32-r31)/N2;                                     //计算区间大小
+      printf(&quot;\n       以下为“R1= %fm、R2= %fm”的积分结果：\n &quot;,r31,r32);
+      printf(&quot;            取区间数N为:  %d\n\n &quot;,N2);     //输出所选择的N值大小
+      s=f(r31)*h; 
+      for(i=1;i&lt;N2;i++) 
+      {s=s+f(r31+i*h)*h; } 
+      printf(&quot;  (1)矩形法求积分值     s=%10.6f\n&quot;,s);    //使用矩形法进行计算
+      s=0;
+      s=0.5*(f(r31)+f(r31+h))*h; 
+      for(i=1;i&lt;N2;i++) 
+      {
+        s=s+0.5*(f(r31+i*h)+f(r31+(i+1)*h))*h;
+      } 
+      printf(&quot;   (2)梯形法求积分值     s=%10.6f\n&quot;,s);   //使用梯形法进行计算
+      s=(4*T(r31,r32,2*N2)-T(r31,r32,N2))/3.0;  
+      printf(&quot;   (3)辛普森法求积分值   s=%f\n&quot;,s);     //使用辛普森法进行计算
+      printf(&quot;\n\n&quot;);
+    }
+ }
+   double f(double r)                   //计算函数值函数
+ { 
+     double y,n,m,x; 
+     n=0.5;
+     m=8.854187817*pow(10,-12);
+     x=0.01;
+     y=n*x*0.5*r/m/pow((x*x+r*r),1.5); 
+     return (y); 
+ } 
+  double T(double x,double y,int z) 
+{
+    double h,Tn; 
+    int i; 
+    double f(double t);  
+    h=(y-x)/z;  
+    Tn=(f(x)+f(y))/2;
+    for(i=1;i&lt;z;i++) 
+    Tn=Tn+f(x+i*h); 
+    Tn=Tn*h; 
+    return (Tn);
+}
+</code></pre><blockquote>
+<p>可得到结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F1%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;对比结果：</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE1%E8%A1%A8%E6%A0%BC.jpg" alt=""></p>
+<p>&emsp;可以看出，程序所计算误差非常小，并且验证了梯形法和辛普森法比矩形法误差要小的特点。</p>
+<p>&emsp;程序初始状态默认首先完全计算不同上下限的不同求法情况，将题目中已给的初始值预置于程序内，并将结果一并输出；若用户需要使用不同的上下限以及区间数N值，在程序计算完第一步后直接输出所需要的值即可。</p>
+<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE2.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+void main() 
+{
+ double Y(double t,double y);
+ int i;
+ double y0=0,y,y1=0,h,t0,t,n,k1,k2,k3,k4;
+ y0=0;
+ t0=0;
+ h=0.1;
+ printf(&quot;\n 程序中取步长：h= %2.1f\n&quot;,h);     //输出程序中所预设的步长值
+ while(1)                    //while循环结构提供多次计算功能
+ {
+    printf(&quot;        请输入区间[0,1]上的t值:  &quot;);
+    scanf(&quot;%lf&quot;,&amp;t);                          //输入所要计算的数值
+    if((t&gt;=0.0)&amp;&amp;(t&lt;=1.0))
+    {
+        n=t/h;
+        for(i=0;i&lt;n;i++)
+        {  
+            y=y0+Y(t0,y0)*h;           //二级欧拉近似计算
+            t0=t0+i*h;
+            y1=0.5*(y0+y+Y(t0,y)*h); y0=y1;
+        }
+        printf(&quot;\n   二级欧拉近似求得t=%lf处函数值 y=   %lf:\n&quot;,t,y1);
+        t0=0;y0=0;
+        for(i=0;i&lt;n;i++)
+        {  
+            k1=Y(t0,y0);
+            k2=Y(t0+0.5*h,y0+0.5*h*k1);     //龙格库塔法计算
+            k3=Y(t0+0.5*h,y0+0.5*h*k2);
+            k4=Y(t0+h,y0+h*k3);
+            t0=t0+i*h;
+            y1=y0+(k1+2*k2+2*k3+k4)*h/6; y0=y1;
+        }
+        printf(&quot;  龙格库塔法求得t=%lf处函数值 y=   %lf:\n&quot;,t,y1); t0=0;y0=0;
+    }
+    else
+        printf(&quot;     输入t值不在[0，1]范围内!! \n&quot;);
+    printf(&quot;\n\n     计算完毕,需要继续计算请直接输入t值!!\n\n&quot;);
+  }
+}
+double Y(double t,double y)   
+{                    //计算函数
+ double f;
+ f=1+exp(-t)*sin(y);
+ return f;
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F2%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;程序已预置题中所给的步长值以及导函数、初始条件。提供重复计算的功能，并且若用户输入不在 [0,1]范围内的数值时将做出提示。并且本程序为用户提供了循环多次计算不同t情况下函数值的功能，便于用户多次计算以及检验。</p>
+<p>&emsp;由结果可以看出使用二级欧拉近似以及龙格库塔法可以得到不同的结果，理论上龙格库塔法有较高的精度，但实际中由于原函数无法求得，故无法做出误差分析。</p>
+<h2 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE3.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;math.h&gt;
+#define N 100000
+float b[4]={4,12,8,34};    //等式右边的得数
+float d[4][4]={{5,0,0,0},{0,10,0,0},{0,0,5,0},{0,0,0,10}};      //此即为“D”
+float l[4][4]={{0,0,0,0},{-1,0,0,0},{-1,-1,0,0},{-1,-1,-1,0}};  //此即为“L”
+float u[4][4]={{0,-1,-1,-1},{0,0,-1,-1},{0,0,0,-1},{0,0,0,0}};  //此即为“U”
+float b1[4][4]={0};                                             //此即为“B”
+float d1[4]={0};                                                //此即为“d”
+
+float display()
+{
+ int i,j;
+ for(i=0;i&lt;4;i++)
+ {
+   for(j=0;j&lt;4;j++)
+   {
+      b1[i][j]=-(l[i][j]+u[i][j])/d[i][i];      //计算矩阵&apos;B&apos; 
+   }
+   d1[i]=b[i]/d[i][i];                         //计算矩阵&apos;d&apos;
+ }
+ printf(&quot;矩阵b为：\n&quot;);                        // 输出各矩阵如下
+ for(i=0;i&lt;4;i++)
+  {
+    printf(&quot;%10.3f&quot;,b[i]);
+  }
+ printf(&quot;\n\n&quot;);
+ printf(&quot;矩阵D为：\n&quot;);                       // 输出各矩阵如下
+ for(i=0;i&lt;4;i++)
+ {
+  for(j=0;j&lt;4;j++)
+  {
+    printf(&quot;%10.3f&quot;,d[i][j]);
+  }
+  printf(&quot;\n&quot;);
+ }
+printf(&quot;矩阵L为：\n&quot;);                       // 输出各矩阵如下
+for(i=0;i&lt;4;i++)
+{
+
+  for(j=0;j&lt;4;j++)
+  {
+      printf(&quot;%10.3f&quot;,l[i][j]);
+  }
+  printf(&quot;\n&quot;);
+}
+printf(&quot;矩阵U为：\n&quot;);                     // 输出各矩阵如下
+for(i=0;i&lt;4;i++)
+{
+ for(j=0;j&lt;4;j++)
+ {
+  printf(&quot;%10.3f&quot;,u[i][j]);
+ }
+ printf(&quot;\n&quot;);
+}
+printf(&quot;矩阵B为：\n&quot;);                     // 输出各矩阵如下
+for(i=0;i&lt;4;i++)
+{ for(j=0;j&lt;4;j++)
+  { printf(&quot;%10.3f&quot;,b1[i][j]); }
+  printf(&quot;\n&quot;);
+}
+printf(&quot;矩阵d为：\n&quot;);                    // 输出各矩阵如下
+for(i=0;i&lt;4;i++)
+  { printf(&quot;%10.1f&quot;,d1[i]);}
+  printf(&quot;\n\n&quot;);
+return(0);
+}
+float calculate()
+{
+float x1[4]={0},x2[4]={0},temp;
+int i=0,j=0,k=0,n=0;
+printf(&quot;程序中选定最大迭代数为： N= %d\n\n&quot;,N);         
+//将程序中的预设最大迭代数加以说明
+while(1)   
+//while循环的意义是可提供给用户多次输入初始值的功能，便于检验数据结果正确性
+{
+    printf(&quot;       请输入初始值x值：\n&quot;);             //提示用户输入初始值
+    for(i=0;i&lt;4;i++)
+    {
+        printf(&quot;                      X%d初始值为:&quot;,i+1);
+        scanf(&quot;%f&quot;,&amp;x1[i]);
+    }
+    for(i=0;i&lt;4;i++)
+    { x2[i]=x1[i];}
+    while(n&lt;=100000)                              //while循环
+    {
+        for(i=0;i&lt;4;i++)
+        {
+            temp=0;
+            for(j=0;j&lt;4;j++)
+            { temp+=x1[j]*b1[i][j];          //进行迭代，计算 }
+            x2[i]=temp+d1[i];
+        }
+        if((fabs(x2[0]-x1[0])&lt;=0.00001)&amp;&amp;
+        (fabs(x2[1]-x1[1])&lt;=0.00001)&amp;&amp;(fabs(x2[2]-x1[2])
+        &lt;=0.00001)&amp;&amp;(fabs(x2[3]-x1[3])&lt;=0.00001))  //检验输出条件           
+        {
+            k=1;
+            break;
+        }
+        else 
+        {
+            for(i=0;i&lt;4;i++)
+            { x1[i]=x2[i]; }
+        }
+        n++;
+    }
+    if(k==1)          //若有解，将解输出
+    {
+        printf(&quot;\n    解得x如下：\n&quot;);
+        for(i=0;i&lt;4;i++)
+        { printf(&quot; x%d=%9.6f\n&quot;,i+1,x2[i]); }
+    }
+    else printf(&quot;答案不收敛或初始值不合适,请重试\n&quot;);
+    //预设若不能满足收敛则做出提示，重新输入初始值
+    printf(&quot;\n 需要更换初始值请直接输入即可!!\n\n&quot;);
+}
+return(0);
+}
+void main()
+{    
+display();   //输出各原始矩阵函数
+calculate();  //计算函数
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F3%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;程序已预置方程组，故无需输入各方程系数，选定最大迭代数N=1000000，在迭代过程中若两个迭代的结果相差小于10E-6,则视为解已经稳定，输出结果。</p>
+<p>&emsp;在程序中直接输入初始值即可开始自动计算，并且提供重复输入初始值的功能以便于用户检验与分析。</p>
+<p>&emsp;在选定初始值分别为：x1=0、x2=14、x3=476、x4=3478的情况下，我们可以得到一下的一组解：</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE3%E8%A1%A8%E6%A0%BC.jpg" alt=""></p>
+<p>&emsp;可以看出，使用雅克比迭代法得到的结果非常精确，并且在多次的试验下可以发现初始值的选取几乎不会对结果造成很大的影响。</p>
+<h2 id="Example-4"><a href="#Example-4" class="headerlink" title="Example 4"></a>Example 4</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE4.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#define pi 3.1415926
+main() 
+{   
+double fun(double x); 
+double fun1(double x);    
+int n,i; double x0,x1,x00=0;
+x0=pi;  printf(&quot;\n\n\n&quot;);n=10000000;     //最大迭代数
+for(i=0;i&lt;n;i++)
+{  
+ x1=x0-fun(x0)/fun1(x0);
+ if(fabs(x1-x0)&gt;=pow(10,-4))
+ { x0=x1;}
+ else
+ { printf(&quot;     x=π时所求根为:%lf\n&quot;,x1); break;} 
+ x0=0.5*pi;
+ for(i=0;i&lt;n;i++)
+ {  
+    x1=x0-fun(x0)/fun1(x0);                           //计算，迭代
+    if(fabs(x1-x0)&gt;=pow(10,-4))
+    { x0=x1;}
+    else
+    { printf(&quot;  x=π/2时所求根为:%lf\n&quot;,x1); break;     //输出根    }
+while(1)
+{
+    printf(&quot;\n\n  若需采用其它初值，请直接输入：&quot;);      //输入其他初始值
+    scanf(&quot;%lf&quot;,&amp;x0);  x00=x0;
+    for(i=0;i&lt;n;i++)
+    {  
+        x1=x0-fun(x0)/fun1(x0);                     //进行迭代计算
+        if(fabs(x1-x0)&gt;=pow(10,-4))
+        { x0=x1;}
+        else
+        {
+            printf(&quot;\n x=%8.4f时所求根为:%f\n&quot;,x00,fabs(x1)); 
+            //由于此函数为奇函数，故正负根一致
+            if(x1&lt;=0.00001)
+            {
+                printf(&quot;\n 解为0，非正根!!\n&quot;);    //若解为0，对用户进行提示
+            } break;
+        }
+    }
+}
+}
+double fun(double x)     //计算函数
+{  
+ double f; f=sin(x)-0.5*x;
+ return f;
+}
+double fun1(double x)     //计算函数
+{   
+ double f; f=cos(x)-0.5;
+ return f;
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F4%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;程序中已经将题中所给的初始值预置，当两次迭代的结果相差小于10E-4时，视为解已经稳定，自动计算两个初始值下的结果并输出，无需经历选择过程。并且在计算结束后，提供了用户选择其他初始值进行迭代的功能。程序中发现在不同的初始值下，可能出现0、1.895494和-1.895494三种情况，因函数为奇函数，故我们默认将负根视为正根。</p>
+<p>&emsp;检验如下：</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE4%E5%85%AC%E5%BC%8F.jpg" alt=""></p>
+<p>&emsp;可以看出，使用程序所迭代而得到的结果非常精确，满足要求。</p>
+<h2 id="Example-5"><a href="#Example-5" class="headerlink" title="Example 5"></a>Example 5</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE5.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;stdlib.h&gt;
+main() 
+{   
+ int n=10000000,i; double x0,x1,a,b,r,t,p,e=1,eq=0;
+ a=3.592; b=0.04267; r=0.082054; t=500; p=200;
+ printf(&quot;\n  -----------------------------------------------------------------\n&quot;);  
+ printf(&quot;  -----------------------------------------------------------------\n&quot;);
+ printf(&quot;\n\n                     请输入初值x0= &quot;);                                  //一下为输入
+ scanf(&quot;%lf&quot;,&amp;x0);        
+ for(i=0;i&lt;n;i++)
+ {  
+    x1=(r*t)/(p+(a/(x0*x0)))+b;                            //迭代公式
+    if(fabs(x1-x0)&lt;pow(10,-4))                             //误差限0.0001
+    { 
+        printf(&quot;\n        误差限为 0.0001 情况下迭代法所求根为:%12.9lf\n\n&quot;,x1);
+        eq=(p+a/(x1*x1))*(x1-b)-r*t;                                      //代入检验功能
+        printf(&quot;          将此结果代入方程后得结果为：%12.9lf\n&quot;,eq);
+        printf(&quot;                (此结果越接近 0，表示所求的根的值越精确!!)\n&quot;);break;
+    }
+    else x0=x1;
+ }
+ while(1)        //为用户提供更改初始值以及误差限的功能，便于更精确的计算结果
+ {
+    printf(&quot;  -----------------------------------------------------------------\n&quot;);
+    printf(&quot;  -----------------------------------------------------------------\n&quot;);
+    printf(&quot;\n             若需更换初始值以及误差限，请直接输入即可!!\n\n&quot;);
+    printf(&quot;                     请输入初值x0= &quot;);                   //输入初始值
+    scanf(&quot;%lf&quot;,&amp;x0);    
+    printf(&quot;          请输入误差限(例如:0.000001)：ε= &quot;);                //输入误差限
+    scanf(&quot;%lf&quot;,&amp;e);
+    for(i=0;i&lt;n;i++)
+    {  
+        x1=(r*t)/(p+(a/(x0*x0)))+b;                               //迭代公式
+        if(fabs(x1-x0)&lt;=e)                                         //判断条件
+        { 
+            printf(&quot;\n        误差限为%12.10lf 情况下迭代法所求根为:%12.9lf\n\n&quot;,e,x1);
+            eq=(p+a/(x1*x1))*(x1-b)-r*t;                                    //代入检验功能
+            printf(&quot;          将此结果代入方程后得结果为：%12.9lf\n&quot;,eq);
+            printf(&quot;                (此结果越接近 0，表示所求的根的值越精确!!)\n&quot;);break;
+        }
+        else x0=x1;
+    }
+ }
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F5%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;本程序已将公式中的各常数预置，在此说明程序运行迭代是最大的迭代数N=10000000。</p>
+<p>&emsp;本程序还为用户提供了在题目所给的误差限（10E-4）之外更多的选择，用户可以自行输入误差限以及重复输入初始值以便于进行数据检验以及多数据处理。同时在计算得出结果之后，附带了检验的功能，将所得结果代回原方程中，分析结果与0的相近程度，越相近，表示程序所求的根越精确。</p>
+<p>&emsp;在选择了不同的误差限下，我们可以得到不同的迭代结果：</p>
+<p>ε=10E-4、初值为3时，求得v=0.168182612，代入：<br><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE5%E5%85%AC%E5%BC%8F1.jpg" alt=""></p>
+<p>ε=10E-8、初值为2563时，求得v=0.168076832，代入：<br><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE5%E5%85%AC%E5%BC%8F2.jpg" alt=""></p>
+<p>&emsp;可以发现，但误差限选择越小的值，所得到的结果越接近0，即精确度越高，程序的迭代效果越好。</p>
+<p>&emsp;函数迭代法程序较简单，编写方便，使用于快速进行数据分析。</p>
+<h2 id="Example-6"><a href="#Example-6" class="headerlink" title="Example 6"></a>Example 6</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE6.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+double fx[6]={0.2500,0.2268,0.2066,0.1890,0.1736,0};
+double sixthcalculate()
+{
+ double k=0,k0=0,fxx,f53=0,f54=0,f5=0; int n=0,m=0;
+ printf(&quot;\n\n       初始值为:\n&quot;);
+ for(n=0;n&lt;5;n++)
+ {
+    printf(&quot;               f(%2.1f)=%7.4f  \n&quot;,n*0.1+1.0,fx[n]);
+ } printf(&quot;\n&quot;);
+ for(n=0;n&lt;5;n++)          //尝试以三种方式计算各个导数值,并最后求平均值
+ {
+    k=0;m=0;
+    if(n&lt;3)               //判断是否可以使用这种计算方式
+    {
+        k0=(4*fx[n+1]-3*fx[n]-fx[n+2])/0.2;                 
+        k+=k0,m++;
+    }
+    if(0&lt;n&amp;&amp;n&lt;4)        //判断是否可以使用这种计算方式
+    {
+        k0=(fx[n+1]-fx[n-1])/0.2;
+        k+=k0,m++;
+    }
+    if(1&lt;n&amp;&amp;n&lt;5)          //判断是否可以使用这种计算方式
+    {
+        k0=(fx[n-2]-4*fx[n-1]+3*fx[n])/0.2;
+        k+=k0,m++;
+    }
+    fxx=k/m;                        //求平均值
+    if(n==3)
+        f53=4*fx[4]-fxx*0.2-3*fx[3];    //计算之时x=1.5时的预测函数值
+    if(n==4)
+        f54=fxx*0.2+fx[3];     //计算之时x=1.5时的预测函数值
+    printf(&quot;  f(%2.1f)处的导数值为：%6.4f  \n&quot;,n*0.1+1.0,fxx);
+ }
+ f5=(f53+f54)/2;  //对所得的f(1.5)的两个预测函数值求平均
+ fxx=(fx[3]-4*fx[4]+3*f5)/0.2; 
+ //计算x=1.5处的一阶导数值只能使用三点公式的最后一个公式
+ printf(&quot;\n   f(1.5)处的&apos;函数值&apos;预测为：%7.4f  \n&quot;,f5);
+ printf(&quot;   f(1.5)处的&apos;导数值&apos;预测为：%6.4f  \n\n\n&quot;,fxx);
+ return 0;
+}
+
+float main()
+{
+ sixthcalculate();
+ return 0;
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F6%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;程序中已经将各初始值预置，并由于前几个数据的导数值可以由多个公式求得，故程序中加入了平均值的方式以求得最佳值。</p>
+<p>&emsp;为计算 x=1.5处的导数值，需要求得x=1.5的函数值。此处求f(1.5)并未带入公式（因为公式假设未知），而是使用x=1.3与x=1.4的导数值逆向(预测）推出f(1.5) (同样需要求平均)，进而即可预测求得x=1.5处的一阶导数值。</p>
+<blockquote>
+<p>与精确值比较：</p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE6%E8%A1%A8%E6%A0%BC.jpg" alt=""></p>
+<p>&emsp;可以看出，程序所得结果与精确值相差较小，验证了三点公式的精确度，程序比较成功。但是发现由于f(1.5)的值为预测得出，这给计算x=1.5是的导数值又增加了误差，所以反映到计算结果上F`(1.5)的误差为最大。</p>
+<h2 id="Example-7"><a href="#Example-7" class="headerlink" title="Example 7"></a>Example 7</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE7.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include&lt;string.h&gt;
+#define N 1000            //此即为“d” 
+double  a[8][3]={0};
+double  a1[3][3]={0};
+double     b[8]={7.82,7.93,7.98,7.99,7.92,7.91,7.80,7.71};
+double  b1[3]={0};   //等式右边的得数
+double d[3][3]={0};     //此即为“D”
+double l[3][3]={0};     //此即为“L”
+double u[3][3]={0};     //此即为“U”
+double b2[3][3]={0};   //此即为“B”
+double d1[3]={0};      //此即为“d” 
+
+double fun(int x)       //计算A^T*A函数
+{  
+ int i;
+ double s=0;
+ for(i=0;i&lt;=7;i++)
+ s+=pow(i,x); return s;
+}
+double fun1(int x1)    //计算A^T*y函数
+{  
+ int i;
+ double s=0;
+ double     b[8]={7.82,7.93,7.98,7.99,7.92,7.91,7.80,7.71};
+ for(i=0;i&lt;=7;i++)
+ s+=b[i]*pow(i,x1);  return s;
+}
+double display()
+{
+ int i,j;
+ printf(&quot;\n\n\n 取拟合多项式为：y=a0+a1x+a2x^2\n\n&quot;);
+ printf(&quot; 多项式组成的线性方程组系数矩阵A为:\n&quot;);
+ for(i=0;i&lt;8;i++)
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        a[i][j]=pow(i,j);   //计算矩阵
+        printf(&quot;    %10.3lf&quot;,a[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ }
+ printf(&quot;\n 所得正规方程组左系数矩阵A^T*A为:\n&quot;);
+ for(i=0;i&lt;3;i++)
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        a1[i][j]=fun(i+j);   //计算矩阵A^T*A
+        printf(&quot;         %10.3lf&quot;,a1[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ }
+ printf(&quot;\n 正规方程组右系数矩阵A^T*y为:\n&quot;);
+ for(i=0;i&lt;3;i++)
+ {
+    b1[i]=fun1(i);                  //计算A^T*y
+    printf(&quot;                            %10.3lf&quot;,b1[i]);
+    printf(&quot;\n&quot;);                   //输出
+ }
+ printf(&quot;\n 下面开始用高斯塞德尔迭代法求正规方程组得解:\n&quot;);  
+ //使用类似第三题的雅克比迭代法求解方程组
+ printf(&quot;\n 矩阵b为：\n&quot;);
+ for(i=0;i&lt;3;i++)
+ { printf(&quot;    %10.3f&quot;,b1[i]);
+ }
+ printf(&quot;\n\n&quot;);
+ printf(&quot;\n 矩阵D为：\n&quot;);     //输出各矩阵
+ for(i=0;i&lt;3;i++)
+ {    
+    for(j=0;j&lt;3;j++)
+    {
+        if(i==j)
+            d[i][j]=a1[i][j];
+        else
+            d[i][j]=0;
+        printf(&quot;     %10.3f&quot;,d[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ }
+ printf(&quot;\n 矩阵L为：\n&quot;);  //输出各矩阵
+ for(i=0;i&lt;3;i++)
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        if(i&gt;j)
+            l[i][j]=a1[i][j];
+        else
+            l[i][j]=0;
+        printf(&quot;     %10.3f&quot;,l[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ }
+ printf(&quot;\n 矩阵U为：\n&quot;);         //输出各矩阵
+ for(i=0;i&lt;3;i++)
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        if(i&lt;j)
+            u[i][j]=a1[i][j];
+        else
+            u[i][j]=0;
+        printf(&quot;     %10.3f&quot;,u[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ }
+ for(i=0;i&lt;3;i++)  //矩阵B构成//
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        b2[i][j]=-(l[i][j]+u[i][j])/d[i][i];
+    }
+    d1[i]=b1[i]/d[i][i];
+ }
+ printf(&quot;\n 矩阵B为：\n&quot;);       //输出各矩阵
+ for(i=0;i&lt;3;i++)
+ {
+    for(j=0;j&lt;3;j++)
+    {
+        printf(&quot;     %10.5f&quot;,b2[i][j]);
+    }
+    printf(&quot;\n&quot;);
+ } 
+ printf(&quot;\n 矩阵d为：\n&quot;);         //输出各矩阵
+ for(i=0;i&lt;3;i++)
+ {
+    printf(&quot;      %10.5f&quot;,d1[i]);
+ } 
+ printf(&quot;\n\n&quot;); return(0);
+}
+double calculate()
+{
+ double x1[3]={0},x2[3]={0},temp;
+ int i=0,j=0,k=0,n=0;
+ while(1)
+ {
+    printf(&quot;      ---------------------\n&quot;);
+    printf(&quot;      ---------------------\n&quot;);
+    printf(&quot;                      请输入初值x值：\n\n&quot;);   
+    for(i=0;i&lt;3;i++)
+    {
+        printf(&quot;                      X%d值为: &quot;,i+1);
+        scanf(&quot;%lf&quot;,&amp;x1[i]);
+    }
+    for(i=0;i&lt;3;i++)
+    {
+        x2[i]=x1[i];
+    }
+    for(i=0;i&lt;3;i++)
+    {
+        (double)(x2[i])=(double)(x1[i]);
+    }
+    while(n&lt;=10000000)
+    {
+        for(i=0;i&lt;3;i++)
+        {
+            temp=0;
+            for(j=0;j&lt;3;j++)
+            {
+                if(j!=i)
+                {
+                    temp+=(double)(x1[j])*(double)(b2[i][j]);
+                }
+            }
+            x1[i]=(double)(temp)+(double)(d1[i]);
+        }
+ if((fabs(x2[0]-x1[0])&lt;=0.0000001)&amp;&amp;(fabs(x2[1]-x1[1])
+ &lt;=0.0000001)&amp;&amp;(fabs(x2[2]-x1[2])&lt;=0.0000001))
+    {  
+//迭代中，当两次迭代的结果相差小于0.0000001时视为解已经稳定，可以输出
+            k=1;break;
+    }
+        else 
+        {
+            for(i=0;i&lt;3;i++)
+            {
+                (double)(x2[i])=(double)(x1[i]);   //交换
+            }
+        }
+        n++;
+    }
+    if(k==1)
+    {
+        printf(&quot;\n       解得系数如下：\n\n&quot;);
+        for(i=0;i&lt;3;i++)
+        {
+            printf(&quot;       a%d=%12.7lf\n&quot;,i,x2[i]);
+        }
+        printf(&quot;\n   即曲线为:\n&quot;);
+        printf(&quot;    y=%9.7lf+%9.7lf*x%9.7lf*x*x&quot;,x2[0],x2[1],x2[2]);
+    }
+    else printf(&quot;答案不收敛或初始值不合适,请重试\n&quot;);
+    printf(&quot;\n\n     计算完毕!!需要更换初始值请在下方直接输入\n\n&quot;);     
+//此处为用户提供了重复更换初始值的功能，便于用户进行检验与分析数据
+ }return(0);
+}
+main() 
+{
+ display();    //计算各矩阵并将矩阵输出函数
+ calculate();  //雅克比迭代计算函数
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F7%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;本程序已经将题目中所给的数据预置于内，首先由草图可以假设所需要拟合的曲线近视为二次曲线，即设</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE7%E5%85%AC%E5%BC%8F.jpg" alt=""></p>
+<p>&emsp;再使用最小二乘法求得正规方程组，然后利用与所学雅克比迭代法类似但又区别的‘高斯-塞德尔’迭代法求出拟设方程的系数，并设置最大迭代数10000000次，程序中默认若在一次迭代中，前后两组数据的差值小10E-7，即视为解已经稳定，输出得数，否则提示用户初始值不佳，需要重试。</p>
+<p>&emsp;将初始值设为 x1=8734、x2=0、x3=0.000001时所得结果与精确解比较：</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE7%E8%A1%A8%E6%A0%BC.jpg" alt=""></p>
+<p>&emsp;从表中可以看出此程序的计算结果误差非常小，精度较高，完全符合一般情况下的曲线拟合用途。并且在此程序运行时选择的初始值较为极端的情况下，仍然有较小的误差。</p>
+<p>&emsp;设计程序之初所用迭代法为雅克比迭代法，但在无数尝试之后发现在迭代过程中 〖x_i〗^(k+1) 始终不收敛，在仍然未想出雅氏迭代法的解决方法的情况下，决定转为使用“高斯-塞德尔”迭代法，并且经过调试之后成功运行。</p>
+<p>&emsp;虽然SOR法有更快的收敛速度，但是与高斯法接近，且高斯法已经满足要求，故不用SOR法。</p>
+<h2 id="Example-8"><a href="#Example-8" class="headerlink" title="Example 8"></a>Example 8</h2><p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE8.jpg" alt=""></p>
+<blockquote>
+<p>代码如下： </p>
+</blockquote>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;math.h&gt;
+int N=10000000;
+int N1=10000000;
+double Simpson()          //辛普森法求定积分
+{
+ int i=0;
+ double x=0,y=0,x1=0;
+ x1=1/(double)(N);
+ for(i=0;i&lt;=N;i++)
+ {
+    if(i==0||i==N)       //i不同是Ci取不同的值
+        y+=1.0/3.0*(1/(1+x*x))*x1;                  
+    if((i%2)==0)
+        y+=2.0/3.0*(1/(1+x*x))*x1;
+    if((i%2)==1)
+        y+=4.0/3.0*(1/(1+x*x))*x1;
+    x+=x1;
+ }
+ printf(&quot;\n\n   程序中使用的区间数或投点总数均为：N=10000000\n&quot;);
+ printf(&quot;\n     用辛普森法求得定积分为：    %12.8f\n&quot;,y);
+ return 0;
+}
+double Rand1()   //用以产生随机数的函数1
+{
+ static int x0=4880;   
+ //因为随机数产生需要外部函数，故需要设立一个静态局部保证每次调用
+ 随机数产生函数都能得到不一样的随机数，否则每次的返回结果相同
+ int M=87946,L=4534,C=61,x1=0;   
+ //此处的各项常数已经由试验后设立为最佳常数(需配合相应的N)检验效果见运行界面
+ double R;
+ x1=(L*x0+C)%M;    
+ R=(double)(x1)/(double)(M);
+ x0=x1;
+ return R;
+}
+double Rand2()     //用以产生随机数的函数2
+{
+ static int x0=6345;    
+ //因为随机数产生需要外部函数，故需要设立一个静态局部保证
+ 每次调用随机数产生函数都能得到不一样的随机数，否则每次的返回结果相同                            
+ int M=87946,L=4534,C=61,x1=0;   
+ //此处的各项常数已经由试验后设立为最佳常数(需配合相应的N),检验效果见运行界面
+ double R;
+ x1=(L*x0+C)%M;
+ R=(double)(x1)/(double)(M);
+ x0=x1;
+}
+ return R;
+double Randway()    //随机掷点法计算定积分
+{
+ double res,x,y,fx,lx=0,ly=0;
+ int i,M=0;
+ for(i=0;i&lt;N1;i++)
+ {
+    x=Rand1(),lx+=x;  
+    //选定随机数，并进行累加以最后求平均值用于验证随机性优劣
+    y=Rand2(),ly+=y;   
+    //为减少两数的联系，设立两个随机函数Rand1()和Rand(2)
+    fx=(1.0/(1+x*x));
+    if(y&lt;=fx)          //计算
+        M++;           //计数
+ }
+ res=(double)(M)/(double)(N1); //求得定积分
+ printf(&quot; 用随机掷点法求得定积分为：    %12.8f\n\n&quot;,res);
+ printf(&quot; 产生伪随机数Rand1()的平均值为： %12.8f\n&quot;,lx/(double)(N1));
+ printf(&quot; 产生伪随机数Rand2()的平均值为： %12.8f\n\n&quot;,ly/(double)(N1));
+ return 0;
+}
+double function()    //第(2)问使用密度函数求定积分的函数
+{
+ double fx=0,fx2=0,R1=0,fs,fs2,f0,g0,fxx=0;
+ int i;
+ for(i=0;i&lt;N1;i++)
+ {
+    R1=Rand1();             //使用随机数
+    fxx=(1/(1.0+R1*R1));    //对应书中的g1(x)函数
+    fx+=fxx;
+    fx2+=fxx*fxx;                      
+ }
+ fs=fx/(double)(N1);
+ fs2=fx2/(double)(N1);     //方差第一项
+ f0=fs2-(fs*fs);           //方差
+ g0=sqrt(f0/(double)(N1));   //误差
+ printf(&quot;         选概率密度函数为f(x)=1情况下:\n&quot;);
+ printf(&quot;   结果为：    %12.8f\n&quot;,fs);
+ printf(&quot;   方差为：    %12.8f\n&quot;,f0);
+ printf(&quot;   误差为：    %12.8f\n\n&quot;,g0);
+ fs=0,fx=0,fx2=0;
+ for(i=0;i&lt;N1;i++)
+ {
+    R1=2-sqrt(4-3*Rand2());  //使用随机数
+    fxx=3.0/((1+R1*R1)*(4.0-2*R1));  //对应书中的g1(x)函数
+    fx+=fxx;
+    fx2+=fxx*fxx;                          
+ }
+ fs=fx/(double)(N1);
+ fs2=fx2/(double)(N1);     //方差第一项
+ f0=fs2-(fs*fs);           //方差
+ g0=sqrt(f0/(double)(N1));    //误差计算
+ printf(&quot;选概率密度函数为f(x)=(1/3)*(4-2*x)情况下:\n&quot;);
+ printf(&quot;         结果为：    %12.8f\n&quot;,fs);
+ printf(&quot;         方差为：    %12.8f\n&quot;,f0);
+ printf(&quot;        误差为：    %12.8f\n\n&quot;,g0);
+ printf(&quot;\n\n   (已结束!!) \n\n&quot;);
+ return 0;
+}
+double main()
+{
+ Simpson();    //辛普森法
+ Randway();    //随机掷点法
+ function();   //概率密度函数法
+ return 0;
+}
+</code></pre><blockquote>
+<p>结果如下： </p>
+</blockquote>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F8%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<p>&emsp;辛普森法在第一题中已经运用，此处不赘述。</p>
+<p>&emsp;随机掷点法中为产生不同的随机数运用了两个随机数产生函数Rand1()和Rand2()，使用两个函数的目的是为了减少两随机数的联系，为了检验随机数的随机性，对所有的N1（=10000000）个随机数进行累加并求平均值后，与0.5进行比较。需要注意的是，函数产生随机数使用的方法是乘加同余法，其中的常数（λ、C、M）为多次尝试后的结果，此处建议用户在没有更好的解决方案下切勿更改此处的数值。</p>
+<p>&emsp;使用概率密度函数的方法重点在于求出g1(x) (=f(x)/g(x)),f(x)为原函数，g(x)为给出的概率密度函数，将变量视为随机数并将随机数代入，即可求得运用此种方法下的解。</p>
+<p>&emsp;现将程序解与精确解（π/4）做比较：</p>
+<p><img src="http://omwttm1sr.bkt.clouddn.com/%E9%A2%98%E7%9B%AE8%E8%A1%A8%E6%A0%BC.jpg" alt=""></p>
+<p>&emsp;可以看出，程序中使用的四种方法精度都很高。采用了随机数的方法中，精度高的原因：一是方法本身已经是成熟的方法，二是因为程序中所设置的随机数随机性好，这从随机性检验中可以看出来。但是由于循环的次数（N）见多，故在处理速度上有一定延迟，这是需要改善的地方。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—2016年12月1日。</p>
+<pre><code>             122141
+          20141000298
+             郭少俊
+gsjcan@outlook.com/gsj@cug.edu.cn
+</code></pre>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://gsjcan.com/2017/03/22/计算物理几道习题的解法/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//gsjcan.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/03/27/夫兰克赫兹实验实验报告/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/16/基本软件的高斯峰分离方法/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.jpg" alt="Shaojun Guo's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        gsjcan@outlook.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">4</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/English-Learning/">English Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Feelings/">Feelings<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/课程总结/">课程总结<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/近代物理实验/">近代物理实验<span class="sidebar_archives-count">4</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">8</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/gsjcan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="http://zhihu.com/people/gsjcan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;GSJCAN
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+		
+    
+</footer>
+
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('QNztcVnFEtH14q8cMLe4Jr6j-gzGzoHsz', 'pe3VKu4aa0GPTwIYtGQNsvHO');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+    <script>
+    var searchFunc = function(path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: 'xml',
+            success: function( xmlResponse ) {
+                // get the contents from search data
+                var datas = $( 'entry', xmlResponse ).map(function() {
+                    return {
+                        title: $( 'title', this ).text(),
+                        content: $('content',this).text(),
+                        url: $( 'url' , this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function() {
+                    var str='<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = '';
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function(data) {
+                        var isMatch = true;
+                        var content_index = [];
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g,'').toLowerCase();
+                        var data_url = data.url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if(data_title !== '' && data_content !== '') {
+                            keywords.forEach(function(keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if( index_title < 0 && index_content < 0 ) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += '<li><a href="'+ data_url +'" class="search-result-title" target="_blank">'+ data_title;
+                            var content = data.content.trim().replace(/<[^>]+>/g, '');
+                            if (first_occur >= 0) {
+                                // cut out characters
+                                var start = first_occur - 6;
+                                var end = first_occur + 6;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 10;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, 'gi');
+                                    match_content = match_content.replace(regS, '<em class="search-keyword">'+keyword+'</em>');
+                                })
+                                str += '<p class="search-result">' + match_content + '...</p>' +'</a>';
+                            }
+                        }
+                    });
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    }
+</script>
+
+
+    <script>
+        var inputArea = document.querySelector('#search');
+        var getSearchFile = function() {
+            var path = 'search.xml';
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        if(inputArea) {
+            inputArea.onfocus = function() {
+                getSearchFile();
+            }
+        }
+    </script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
